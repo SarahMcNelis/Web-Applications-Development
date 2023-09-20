@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+<!-- G00398343 WAD Project - Page 5 - Can only be accessed if Login was successful.  -->
+	<head>
+		<title>Mammy's Receipes</title>
+		<meta charset="UTF-8">
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<!-- CSS styling within style tags-->
+		<style>
+			/* header id styling*/
+			#header{
+					font-family:"Lucida Handwriting";
+					text-align: center;
+					margin: 20px;  
+					padding: 20px;  
+					width: 700px;
+					}
+			/* styling for all center tags*/
+			center{
+					background-color: rebeccapurple;
+					}
+			/* CSS for all h1 tags*/
+			h1{
+				font-family:"Lucida Handwriting";
+				text-align: left;
+				}
+			/* CSS for all h2 tags*/
+			h2{
+				font-family:"Lucida Handwriting";
+				}
+			/* CSS for all h3 tags*/
+			h3{
+				font-family:"Lucida Handwriting";
+				}
+			/* CSS for all list items */
+			li{
+				font-family:"Calibri";
+				text-align: justify;
+				}
+		</style>
+	</head>
+
+	<body>
+		<!-- center navigation bar to be included in each html file-->
+		<!-- href for each html file. src for image to click on which brings to each href --> 
+		<center>
+			<h1 id="header">Mammy's Homemade Treats &#9825</h1>
+				<a href="homepage.html">
+					<img src="images/home.jpg" alt="Home Button" title="Home" width="200" border="5"  >
+				</a>		
+				<a href="about_mammy.html">
+					<img src="images/about.jpg" alt="About" title="About" width="200" border="5"  >
+				</a>		
+				<a href="gallery.html">
+					<img src="images/gallery.jpg" alt="Gallery" title="Gallery" width="200" border="5" >
+				</a>		
+				<a href="login.html">
+					<img src="images/recipe.jpg" alt="Recipes" title="Recipes" width="200" border="5" >
+				</a>
+				<a href="http://localhost:8000/reviews.html">
+					<img src="images/reviews.jpg" alt="Reviews" title="Reviews" width="200" border="5" >
+				</a>
+		</center>
+		
+		<br>
+		<!-- This will create a popup using DOM - see script. -->
+		<h1 id="welcome"></h1>
+		
+		<!-- Reference 5.1 - All recipes and content was sourced on the following webpages: -->
+			<!-- https://www.bbc.co.uk/food/recipes -->
+			<!-- https://www.odlums.ie/category/odlums-recipes/all-recipes/ -->
+			<!-- https://www.google.com/search?q=desserts&tbm=isch&hl=en-US&sa=X&ved=2ahUKEwjy3KjHreL3AhWASkEAHaX9DKkQBXoECAEQWg&biw=1349&bih=625-->
+		
+		<!-- Main div containing all recipe divs-->
+		<div>
+			<h1>Welcome to Mammy's Secret Recipes</h1><br>
+				
+				<!-- hr tag creates a horizontal line across the page -->
+				<hr><br>
+				
+				<!-- First recipe -->
+				<div>
+					<h2>Mammy's Scones</h2>
+						<img src="gallery_images/scones.jpg" alt="Scones" align="right" border="none" hspace="20" height="300" alt="Scones" title="Scones">
+						<h3>Ingredients</h3>
+							<!-- Reference 5.2 - types of lists sourced from https://www.w3schools.com/html/html_lists.asp-->
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<li>500g self-raising flour, plus extra for dusting</li>
+								<li>120g butter, chilled</li>
+								<li>1 tsp baking powder</li>
+								<li>250ml milk, plus extra for brushing</li>
+								<li>1 large free-range egg</li>
+								<li>3 tbsp sugar</li>
+							</ul> 						
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Preheat the oven to 180°C/356°F/Gas Mark 4, line a large baking sheet with parchment paper.</li>
+								<li>Combine the flour, 2 tbsp of sugar, baking powder and the butter in a large mixing bowl and using your fingertips, rub in the butter until the mixture resembles rough breadcrumbs.</li>
+								<li>Making a well in the mix, add the currants, the milk and the egg.</li>
+								<li>In a measuring jug, whisk together the milk and egg until combined. Pour this into the crumb mixture and mix through with a two forks until a rough dough forms.</li>
+								<li>Dust a clean work surface with a little flour, turn the dough out of the bowl and press into a round shape. With a rolling pin, roll the dough out to a thickness of about 4cm (1.5"). Using a 7.5cm (3") circular pastry cutter, cut out the scones and place on the baking sheet. Press the trimmings together, roll out and repeat until you have used all the dough. Otherwise just cut into squares. Dip the cutter into flour here to prevent sticking.</li>
+								<li>Brush each scone with some milk and sprinkle with the remaining sugar.</li>
+								<li>Place in the oven on the middle shelf and bake for 12-14 minutes until they have risen and turned a lovely golden-brown colour on top. Transfer to a wire rack to cool slightly. Serve with butter and jam or however you like and enjoy!</li>
+							</ol>
+				</div><br>
+
+				<hr><br>
+				
+				<!-- Second recipe -->
+				<div>
+					<h2>Mammy's Flapjacks</h2>
+						<img src="gallery_images/flapjacks.jpg" alt="Flapjacks" align="right" border="none" hspace="20" height="300" alt="Flapjacks" title="flapjacks">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<li>170g Margarine</li>
+								<li>170g golden syrup</li>
+								<li>170g light brown sugar (or muscovado sugar)</li>
+								<li>350g porridge oats (the bigger the oats the better)</li>
+								<li>150g chocolate</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Preheat oven to Gas 3 and line the tin will be using with grease proof or baking paper.</li>
+								<li>Melt the butter, then add and melt in the golden syrup and sugar in a pan together at a low heat.</li>
+								<li>Once all is dissolved to a smooth mixture, remove the pan from the heat and slowly stir in the porridge oats bit by bit (add extra oats if the mixture is too gooey).</li>
+								<li>Pack the mixture into the baking tin (or tins) and push down slightly. Bake for 30 minutes or until slightly browning on top.</li>
+								<li>Once cooked remove from oven and leave to cool for 10 minutes.</li>
+								<li>While theose are cooling melt the chocolate down on a low heat or by using the water bowl melting method. Then spread the melted chocolate over the top of the flapjacks, and leave to solidify and cool down.</li>
+								<li>When cool divide into bars or square as preferred and enjoy!</li>
+							</ol>
+				</div><br>		
+
+				<hr><br>
+				
+				<!-- Third recipe -->
+				<div>
+					<h2>Mammy's Double Chocolate Muffins</h2>
+						<img src="gallery_images/double_choc_muffins.jpg" alt="Double Chocolate Muffins" align="right" border="none" hspace="20" height="300" alt="Double Chocolate Muffins" title="Double Chocolate Muffins">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<li>125g plain flour</li>
+								<li>25g cocoa powder</li>
+								<li>1 tsp baking powder</li>
+								<li>1 large egg</li>
+								<li>60g caster sugar</li>
+								<li>2 tbsp vegetable oil</li>
+								<li>100ml whole milk</li>
+								<li>50g chocolate chips (optional)</li>
+								<li>100g icing sugar</li>
+							</ul> 	
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Heat the oven to 180C/160C fan/gas 4. Line a muffin tin with six muffin cases.</li>
+								<li>Sieve the flour, cocoa and baking powder into a medium bowl.</li>
+								<li>Mix together the egg, sugar, oil and milk together in a jug, then gradually pour into the dry ingredients (add chocolate chips now to make double chocolate muffins, if you like) and mix until combined.</li>
+								<li>Spoon the mixture evenly into the cake cases and bake for 20-25 mins until a skewer inserted into the middle comes out clean.</li>
+								<li>Remove from the oven and leave to cool.</li>
+								<li>Meanwhile, gradually mix ½-1 tbsp water into the icing sugar until you have a loose consistency that's not too runny.</li>
+								<li> Drizzle the icing over the muffins once cool and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>
+				
+				<!-- Fourth recipe -->
+				<div>
+					<h2>Mammy's Butterfly Buns</h2>
+						<img src="gallery_images/butterfly_buns.jpg" alt="Butterfly Buns" align="right" border="none" hspace="20" height="300" alt="Butterfly Buns" title="Butterfly Buns">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<li>225g Self Raising Flour</li>
+								<li>175g Butter (room temperature)</li>
+								<li>175g Caster Sugar</li>
+								<li>3 large Eggs (room temperature)</li>
+								<li>1 teaspoon Vanilla Extract/Essence</li>
+								<li>2 tablespoons Cold Water</li>
+								<li>300ml Fresh Cream, whipped</li>
+								<li>125g Strawberry Jam</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Preheat oven to 180°C/350°F/Gas 4. Line a muffin tray with 12 paper cases.</li>
+								<li>Beat butter and sugar together until light and fluffy. Beat in the eggs, one at a time, then add the vanilla and water.</li>
+								<li>Sieve the flour into the mixture and gently mix until all ingredients are combined.</li>
+								<li>Divide the mixture between the paper cases. Bake for 15-20 minutes until golden brown and nicely risen.</li>
+								<li>Once baked, remove from the oven and allow to cool on a wire tray. When cold, cut off the tops.</li>
+								<li>Place some cream on top of bun, then a strip of jam. Cut the tops in half and place on buns to form butterfly wings and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>
+				<!-- Fifth recipe -->
+				<div>
+					<h2>Mammy's Brownbread</h2>
+						<img src="gallery_images/brownbread.jpg" alt="Brownbread" align="right" border="none" hspace="20" height="300" alt="Brownbread" title="Brownbread">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<li>4 cups whole wheat flour</li>
+								<li>1 cup rolled oats</li>
+								<li>½ cup sugar</li>
+								<li>1 teaspoon salt</li>
+								<li>1 teaspoon baking soda</li>
+								<li>1 teaspoon baking powder</li>
+								<li>2 tablespoon unsalted butter</li>
+								<li>2 cup buttermilk</li>
+								<li>2 large eggs</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Preheat oven to 375 degrees. Spray an 8 or 9 inch round cast iron or pie dish, or a 9" by 5" loaf pan with non stick spray .</li>
+								<li>In a large bowl, add the whole wheat flour, oats, sugar, salt, baking soda, and baking powder.</li>
+								<li>Cut in the butter and blend well into the flour. Make a well in the center of the dry ingredients.</li>
+								<li>In another small bowl, whisk the eggs and add the buttermilk to combine.</li>
+								<li>Add the egg mixture into the well of the dry ingredients. Stir to combine the ingredients.</li>
+								<li>Gently roll out the dough onto a floured surface and knead the dough gently for a few minutes.</li>
+								<li>Shape into a round loaf and place in the cast iron skillet. Slash the top into the shape of a cross. Sprinkle top with a bit of flour.</li>
+								<li>Bake for 40-45 minute. Check to see of the bread is done by placing a skewer into the center of the loaf. If it comes out clean, your bread is done.</li>
+								<li>Let cool for about 10 minutes on a wire rack. Remove from the loaf pan and let the bread cool for 30mins before slicing and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>
+				
+				<!-- Sixth recipe -->
+				<div>
+					<h2>Mammy's Apple Tart</h2>
+						<img src="gallery_images/apple_tart.jpg" alt="Apple Tart" align="right" border="none" hspace="20" height="300" alt="Apple Tart" title="Apple Tart">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<li>225g Plain Flour</li>
+								<li>125g Butter or Margarine</li>
+								<li>150ml Cold Water</li>
+								<li>4 large Cooking Apples, peeled, cored and sliced</li>
+								<li>Sugar, to sweeten apples</li>
+								<li>Icing Sugar, to dust (optional)</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Preheat oven to 200°C/400°F/Gas 6.</li>
+								<li>Place butter/margarine in freezer for about 15 minutes to harden.</li>
+								<li>Sieve flour into a bowl.</li>
+								<li>Grate hard butter/margarine into the flour. You may need a little flour on your fingers for this.</li>
+								<li>Using a knife, mix grated butter/margarine into flour.</li>
+								<li>Add sufficient water and mix to a soft dough with the knife.</li>
+								<li>Turn onto a floured board and knead lightly.</li>
+								<li>Roll out half the pastry to the size of an oven proof plate.</li>
+								<li>Arrange apples on the pastry.</li>
+								<li>Sprinkle with sugar to sweeten.</li>
+								<li>Roll remaining pastry to cover the apples.</li>
+								<li>Dampen edge of base pastry with cold water to seal.</li>
+								<li>Press top pastry over apples to make the tart. Seal the edges by using the back of a knife to form a crust. Then cut at 1"/3cm intervals to form a scalloped edge, if liked!</li>
+								<li>Put a cut on top of pastry to allow steam to escape and bake for 25-35 minutes approx.</li>
+								<li>Remove from oven, cool slightly and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>
+
+				<!-- Seventh recipe -->
+				<div>
+					<h2>Mammy's Blueberry Muffins</h2>
+						<img src="gallery_images/blueberry_muffins.jpg" alt="Blueberry Muffins" align="right" border="none" hspace="20" height="300" alt="Blueberry Muffins" title="Blueberry Muffins">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<li>275g Plain Flour</li>
+								<li>2 teaspoons Baking Powder</li>
+								<li>Pinch of Salt</li>
+								<li>125g Caster Sugar</li>
+								<li>75g/3oz Butter, melted</li>
+								<li>2 Eggs, beaten</li>
+								<li>300ml Milk</li>
+								<li>125g Blueberries</li>
+								<li>1 tablespoon Demerara Sugar (optional topping)</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Preheat oven to 200°C/400°F/Gas 6. Grease or line muffin tins with paper cases.</li>
+								<li>Sieve flour, baking powder and salt into a mixing bowl. Stir in the caster sugar.</li>
+								<li>In a separate bowl beat the melted butter, eggs and milk together until frothy, add to the dry ingredients.</li>
+								<li>Gently mix all together with a fork until evenly combined, then stir in the blueberries.</li>
+								<li>Divide the mixture between the muffin tins. Sprinkle the demerara sugar on top of each muffin if used, and bake for about 20 minutes.</li>
+								<li>Allow muffins to cool in the tins, then transfer to a wire tray to cool completely before serving and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>
+				
+				<!-- Eight recipe -->
+				<div>
+					<h2>Mammy's Chocolate Brownies</h2>
+						<img src="gallery_images/choc_brownies.jpg" alt="Chocolate Brownies" align="right" border="none" hspace="20" height="300" alt="Chocolate Brownies" title="Chocolate Brownies">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<li>175g Plain Flour</li>
+								<li>225g Butter or Margarine (room temperature)</li>
+								<li>125g Chocolate (good quality, at least 60% cocoa)</li>
+								<li>325g Caster Sugar</li>
+								<li>2 teaspoons Vanilla Essence</li>
+								<li>4 Eggs, beaten</li>
+								<li>Pinch of Salt</li>
+								<li>½ teaspoon Baking Powder</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Preheat oven to 160°C/320°F/Gas 3. Lightly grease an oblong brownie tin. 25cm/10" x 15cm/6". Small roasting tin would also do.</li>
+								<li>Melt the butter/margarine and chocolate together over a low heat.</li>
+								<li>Remove from heat, add the sugar and mix well.</li>
+								<li>Add vanilla essence and beaten eggs.</li>
+								<li>Sieve the flour, salt and baking powder together and gently stir into chocolate mixture.</li>
+								<li>Pour into prepared tin and bake for about 40-50 minutes until crusty on top.</li>
+								<li>Remove from oven and allow to cool.</li>
+								<li>Cut into brownies and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>			
+
+				<!-- Ninth recipe -->
+				<div>
+					<h2>Mammy's Coffee Cake</h2>
+						<img src="gallery_images/coffee_cake.jpg" alt="Coffee Cake" align="right" border="none" hspace="20" height="300" alt="Coffee Cake" title="Coffee Cake">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<li>170g butter or margarine, plus extra for the tins</li>
+								<li>170g caster sugar</li>
+								<li>3 large eggs</li>
+								<li>170g self-raising flour</li>
+								<li>1 tbsp cooled instant coffee, dissolved in 1 tbsp hot water (add more if you like it stronger)</li>
+								<!-- para and bold tags -->
+								<p><b>For the Icing:</b><p>
+								<li>225g icing sugar</li>
+								<li>100g butter or margarine</li>
+								<li>1½ tbsp instant coffee, dissolved in 1 tbsp hot water</li>
+								<li>Walnuts to decorate (optional)</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Heat the oven to 180C/160C fan. Line and butter two 18cm sandwich tins.</li>
+								<li>Add the sugar and butter to a bowl and whisk until very fluffy and pale.</li>
+								<li>Whisk the eggs in a mug with a fork, then add them gradually to the mixture with 1 tbsp of flour each time. Make sure you don't use all the flour.</li>
+								<li>When the eggs have been fully combined into the mix, add the rest of the flour and fold it in gently.</li>
+								<li>Add the dissolved coffee to the mixture, still folding. Divide into the sandwich tins and cook for 25-30 min until risen and firm and a skewer inserted into the middle comes out clean.</li>
+								<li>Leave to cool in the tin for 5 mins then turn out onto a wire rack to cool completely.</li>
+								<li>Meanwhile, make the icing by beating the icing sugar with the butter until light and fluffy, then add the dissolved coffee.</li>
+								<li>Whisk, then cover and set aside until ready to ice the cake.</li>
+								<li>Spread half the icing on the bottom of one sponge. Sandwich together, then spread the remaining icing on top.</li>
+								<li>Decorate with walnuts (optional), cut and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>			
+
+				<!-- Tenth recipe -->
+				<div>
+					<h2>Mammy's Chocolate Chip Cookies</h2>
+						<img src="gallery_images/choc_chip_cookies.jpg" alt="Chocolate Chip Cookies" align="right" border="none" hspace="20" height="300" alt="Chocolate Chip Cookies" title="Chocolate Chip Cookies">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<li>150g salted butter, softened</li>
+								<li>80g light brown muscovado sugar</li>
+								<li>80g granulated sugar</li>
+								<li>2 tsp vanilla extract</li>
+								<li>1 large egg</li>
+								<li>225g plain flour</li>
+								<li>½ tsp bicarbonate of soda</li>
+								<li>¼ tsp salt</li>
+								<li>200g plain chocolate chips or chunks</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Heat the oven to 190C/fan170C/gas 5 and line two baking sheets with non-stick baking paper.</li>
+								<li>Put 150g softened salted butter, 80g light brown muscovado sugar and 80g granulated sugar into a bowl and beat until creamy.</li>
+								<li>Beat in 2 tsp vanilla extract and 1 large egg.</li>
+								<li>Sift 225g plain flour, ½ tsp bicarbonate of soda and ¼ tsp salt into the bowl and mix it in with a wooden spoon.</li>
+								<li>Add 200g plain chocolate chips or chunks and stir well.</li>
+								<li>Use a teaspoon to make small scoops of the mixture, spacing them well apart on the baking trays. This mixture should make about 30 cookies.</li>
+								<li>Bake for 8–10 mins until they are light brown on the edges and still slightly soft in the centre if you press them.</li>
+								<li>Leave on the tray for a couple of mins to set and then lift onto a cooling rack and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>			
+
+				<!-- Eleventh recipe -->
+				<div>
+					<h2>Mammy's Coffee Slices</h2>
+						<img src="gallery_images/coffee_slice.jpg" alt="Coffee Slices" align="right" border="none" hspace="20" height="300" alt="Coffee Slices" title="Coffee Slices">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<li>250g-300g ready-to-roll puff pastry</li>
+								<li>250ml cream</li>
+								<li>1-2tbsp icing sugar</li>
+								<li>50g good raspberry jam</li>
+								<!-- para and bold tags -->
+								<p><b>For the coffee glaze</b></p>
+								<li>1-2 tbsp boiling hot coffee</li>
+								<li>25g butter</li>
+								<li>100g icing sugar, sifted</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Preheat oven to 200 Celsius.</li>
+								<li>If not pre-rolled, roll out puff pastry into a rectangle. Cut pastry into at least eight even strips (about 9cm x 5cm each).</li>
+								<li>Place the pastry strips on a baking sheet lined with parchment paper. Cover the pastry with a second sheet of parchment paper and weigh it down by resting another baking sheet on top (this prevents the pastry puffing up like a pillow).</li>
+								<li>Bake in the preheated oven for 12-15 minutes until golden and risen (the top layer of parchment and baking tray can be removed for the last five minutes or so of baking to help give a golden colour to the pastry).</li>
+								<li>Remove from the oven and allow to cool, transfer onto a wire rack after five minutes.</li>
+								<li>Whisk the cream until it forms soft peaks. Stir in one-two tablespoon of icing sugar to sweeten the cream to your taste.</li>
+								<li>For the coffee glaze, add the butter into the hot coffee and stir until fully melted (alternatively briefly microwave, until the butter melts).</li>
+								<li>Stir in the sieved icing sugar to create a smooth, thick, liquid glaze, whisk to remove any lumps and add more hot water if the mixture is too stiff. Set aside to cool slightly.</li>
+								<li>To assemble the coffee slices, spread half the baked pastry strips with a layer of jam. Spread whipped cream evenly over the jam.</li>
+								<li>Lastly, spread the coffee glaze over the remaining strips and place them over the cream (coffee side facing upwards).</li>
+								<li> Transfer to the refrigerator for the icing to set and until ready to serve and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>
+
+				<!-- Twelveth recipe -->
+				<div>
+					<h2>Mammy's Lemon Meringue Pie</h2>
+						<img src="gallery_images/lemon_meringue_pie.jpg" alt="Lemon Meringue Pie" align="right" border="none" hspace="20" height="300" alt="Lemon Meringue Pie" title="Lemon Meringue Pie">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<!-- para and bold tags -->
+								<p><b>Pastery</b></p>
+								<li>225g Plain Flour</li>
+								<li>50g Icing Sugar</li>
+								<li>150g Butter or Margarine (room temperature)</li>
+								<li>1 Egg Yolk</li>
+								<li>1 tablespoon Cold Water</li>
+								<li>Few drops of Lemon Juice</li>
+								<!-- para and bold tags -->
+								<p><b>Filling</b></p>
+								<li>50g Cornflour</li>
+								<li>125g Caster Sugar</li>
+								<li>300ml Water</li>
+								<li>Rind & Juice of 2 Lemons</li>
+								<li>2 Egg Yolks</li>
+								<!-- para and bold tags -->
+								<p><b>Meringue</b></p>
+								<li>3 Egg Whites</li>
+								<li>Pinch of salt</li>
+								<li>125g Caster Sugar</li>
+							</ul> 	
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Preheat oven to 200°C/400°F/Gas 6. Lightly grease a 20cm/8" flan ring or dish.</li>
+								<li>Make pastry: Sieve the flour and icing sugar together. Mix the egg yolk, water and lemon juice together. Place one third of the flour mixture in a bowl, add the butter/margarine and the liquids. Cream with a fork until well blended. Add the remaining flour and sugar mixture and mix to a firm dough. Cover and refrigerate for about 1 hour.</li>
+								<li>Roll out pastry on a little flour and use to line the flan ring or dish. Prick the base well with a fork, then cover with well crumpled tin foil. This prevents the pastry rising during baking! Bake in preheated oven for 20 minutes until set, removing the tin foil for the last 5 minutes of baking time. Remove from oven. Reduce oven to 150°C/300°F/Gas 2.</li>
+								<li>Meanwhile make the filling: Place the cornflour and sugar in a saucepan, gradually whisk in the water. Add the lemon rind and bring to the boil stirring until thick and transparent. Remove from heat and stir in the strained lemon juice. Beat in the egg yolks and pour into the flan case.</li>
+								<li>Then make the meringue: Beat the egg whites in a clean dry bowl with a pinch of salt until stiff. Beat in the sugar until glossy. Spoon meringue over filling, sprinkle with a little sugar and bake for 25 minutes until golden brown.</li>
+								<li>Enjoy this refreshing tangy dessert hot or cold</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>	
+
+				<!-- Thirteenth recipe -->
+				<div>
+					<h2>Mammy's Caramel Slices</h2>
+						<img src="gallery_images/caramel_slice.jpg" alt="Caramel Slices" align="right" border="none" hspace="20" height="300" alt="Caramel Slices" title="Caramel Slices">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<p><b>Base</b></p>
+								<li>1 cup plain flour, sifted</li>
+								<li>1/2 cup brown sugar</li>
+								<li>1/2 cup Coles Desiccated Coconut</li>
+								<li>125g butter, melted</li>
+								<!-- para and bold tags -->
+								<p><b>Filling</b></p>
+								<li>395g can NESTLÉ Sweetened Condensed Milk</li>
+								<li>2 tablespoons golden syrup</li>
+								<li>60g butter, melted</li>
+								<!-- para and bold tags -->
+								<p><b>Topping</b></p>
+								<li>125g cooking chocolate, chopped</li>
+								<li>60g copha, chopped</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Preheat oven to 180°C. Line a 3cm deep, 28 x 18cm (base) lamington pan.</li>
+								<li>Combine all base ingredients in a bowl. Mix well.</li>
+								<li>Press into prepared lamington pan. Bake for 15 to 20 minutes, or until light golden. Remove from oven. Cool.</li>
+								<li>Make filling: Combine all filling ingredients in a saucepan over medium heat. Cook, whisking, for 8 minutes or until golden. Pour over cooked base. Bake for 12 minutes or until firm. Cool completely. Refrigerate for 3 to 4 hours, or until set.</li>
+								<li>Make topping: Place chocolate and copha into a heat-proof bowl over a saucepan of simmering water. Stir until melted. Pour over caramel. Refrigerate to set.</li>
+								<li>Once set, cut into squares and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>
+
+				<!-- Fourteenth recipe -->
+				<div>
+					<h2>Mammy's Mini Cherry Bakewell Tarts</h2>
+						<img src="gallery_images/mini_cherry_bakewell_tarts.jpg" alt="Mini Cherry Bakewell Tarts" align="right" border="none" hspace="20" height="300" alt="Mini Cherry Bakewell Tarts" title="Mini Cherry Bakewell Tarts">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<!-- para and bold tags -->
+								<p><b>Base</b></p>
+								<li>2 x 320g sheets of all butter shortcrust pastry</li>
+								<!-- para and bold tags -->
+								<p><b>For the frangipane</b></p>
+								<li>120g butter, softened</li>
+								<li>120g golden caster sugar</li>
+								<li>1 egg</li>
+								<li>1 tbsp plain flour</li>
+								<li>110g ground almonds</li>
+								<li>90g cherry jam</li>
+								<!-- para and bold tags -->
+								<p><b>For the icing</b></p>
+								<li>200g icing sugar</li>
+								<li>12 glacé cherries</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Heat the oven to 180C/160C fan/gas 4. Lightly butter a 12 hole muffin tin.</li>
+								<li>Unroll the sheet of pastry and use a 10cm circular pastry cutter to cut 12 circles out of the pastry sheet. Press the cut circles into the holes of the tin, making sure they come right up and slightly over the top – pushing out any creases.</li>
+								<li>Chill the pastry in the fridge for 20mins. Scrunch up 10cm x 10cm squares of baking paper and then un-scrunch and use to line each of the pastry tarts, then fill with baking beans, rice or dried pulses.</li>
+								<li>Bake for 10 mins, then remove the paper and beans and bake for 10 mins longer, until golden brown. Set aside to cool a little.</li>
+								<li>Make the filling by beating together the butter and sugar until light and fluffy, then whisk in the egg, followed by the flour (the flour will prevent the mixture from splitting).</li>
+								<li>Fold in the ground almonds. Spoon a level tsp of cherry jam into each of the pastry shells, followed by a tablespoon of the frangipane mixture.</li>
+								<li>Bake for 20 mins, until the frangipane is golden and springy. Set aside to cool completely.</li>
+								<li> Neaten the edges of the pastry with a small knife or scissors if you like.</li>
+								<li>Mix the icing sugar with 2 tbsp water. Spread the icing over each of the tarts, top each with a glacé cherry</li>
+								<li>Leave to set for 20 mins, then serve with tea and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>	
+
+				<!-- Fifteenth recipe -->			
+				<div>
+					<h2>Mammy's Rocky Road Chunks</h2>
+						<img src="gallery_images/rocky_road_chunks.jpg" alt="Rocky Road Chunks" align="right" border="none" hspace="20" height="300" alt="Rocky Road Chunks" title="Rocky Road Chunks">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<li>200g digestive biscuits (Rich Tea can also be used)</li>
+								<li>135g butter or margarine</li>
+								<li>200g dark chocolate (70% cocoa works best)</li>
+								<li>2-3 tbsp golden syrup</li>
+								<li>100g mini marshmallows (chopped regular marshmallows work too)</li>
+								<li>icing sugar, to dust</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Grease and line an 18cm square brownie tin with baking paper.</li>
+								<li>Place 200g digestive biscuits in a freezer bag and bash with a rolling pin or just the side of your fist until they're broken into a mixture of everything between dust and 50p-sized lumps. Set aside.</li>
+								<li>In a large saucepan melt 135g butter or margarine, 200g dark chocolate and 2-3 tbsp golden syrup over a gentle heat stirring constantly until there are no or almost no more lumps of chocolate visible, then remove from the heat. Leave to cool.</li>
+								<li>Take the biscuits, 100g mini marshmallows and stir into the chocolate mixture until everything is completely covered.</li>
+								<li>Tip the mixture into the lined baking tin, and spread it out to the corners.</li>
+								<li>Chill for at least 2 hrs then dust with icing sugar and cut into 12 fingers and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>			
+
+				<!-- Sixteenth recipe -->
+				<div>
+					<h2>Mammy's Shortbread Swirls</h2>
+						<img src="gallery_images/shortbread_swirls.jpg" alt="Shortbread Swirls" align="right" border="none" hspace="20" height="300" alt="Shortbread Swirls" title="Shortbread Swirls">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<!-- list items -->
+								<li>1 cup salted butter (room temperature)</li>
+								<li>1 cup confectioner’s sugar</li>
+								<li>1 teaspoon vanilla extract</li>
+								<li>2 cups all purpose flour</li>
+								<li>1 tbsp milk</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Preheat the oven to 350 degrees F/180 degrees C.</li>
+								<li>Place the butter, confectioner’s sugar and vanilla in a large bowl, and beat with an electric mixer until combined, light, and fluffy.</li>
+								<li>Add the flour and mix until it’s crumbly and looks like it can’t be mixed more.</li>
+								<li>Add the milk and keep mixing. The dough should clump together after about 15 seconds. </li>
+								<li>Place the dough into a pastry bag fitted with a very large star tip, and pipe onto a silicone mat lined baking sheet, with no more than 12 cookies per sheet. </li>
+								<li>Bake the cookies for 15 minutes or until lightly golden.</li>
+								<li>Let them cool completely (on the tray is fine) and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>
+
+				<!-- Seventeenth recipe -->
+				<div>
+					<h2>Mammy's Victoria Sponge Cake</h2>
+						<img src="gallery_images/vic_sponge_cake.jpg" alt="Victoria Sponge Cake" align="right" border="none" hspace="20" height="300" alt="Victoria Sponge Cake" title="Victoria Sponge Cake">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+							<!-- list items -->
+								<li>200g caster sugar</li>
+								<li>200g softened butter</li>
+								<li>4 eggs, beaten</li>
+								<li>200g self-raising flour</li>
+								<li>1 tsp baking powder</li>
+								<li>2 tbsp milk</li>
+								<!-- paragraph and bold tags -->
+								<p><b>For the filling</b></p>
+								<li>100g butter, softened</li>
+								<li>140g icing sugar, sifted</li>
+								<li>drop vanilla extract (optional)</li>
+								<li>half a 340g jar good-quality strawberry jam</li>
+								<li>icing sugar, to decorate</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Heat oven to 190C/fan 170C/gas 5. Butter two 20cm sandwich tins and line with non-stick baking paper.</li>
+								<li>In a large bowl, beat 200g caster sugar, 200g softened butter, 4 beaten eggs, 200g self-raising flour, 1 tsp baking powder and 2 tbsp milk together until you have a smooth, soft batter.</li>
+								<li>Divide the mixture between the tins, smooth the surface with a spatula or the back of a spoon.</li>
+								<li>Bake for about 20 mins until golden and the cake springs back when pressed.</li>
+								<li>Turn onto a cooling rack and leave to cool completely.</li>
+								<li>To make the filling, beat the 100g softened butter until smooth and creamy, then gradually beat in 140g sifted icing sugar and a drop of vanilla extract (if you’re using it).</li>
+								<li>Spread the buttercream over the bottom of one of the sponges. Top it with 170g strawberry jam and sandwich the second sponge on top.</li>
+								<li>Dust with a little icing sugar before serving and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>
+
+				<!-- Eighteenth recipe -->
+				<div>
+					<h2>Mammy's Mince Pies</h2>
+						<img src="gallery_images/mince_pies.jpg" alt="Mince Pies" align="right" border="none" hspace="20" height="300" alt="Mince Pies" title="Mince Pies">
+						<h3>Ingredients</h3>
+							<!-- unordered list -->
+							<ul>
+								<li>225g Plain Flour</li>
+								<li>125g Caster Sugar</li>
+								<li>100g Ground Almonds</li>
+								<li>125g Butter or Margarine (room temperature)</li>
+								<li>1 Egg (beaten)</li>
+								<li>A little water, if necessary</li>
+								<li>450g/1lb Jar Mincemeat</li>
+								<li>cing sugar</li>
+							</ul> 
+						<h3>Method</h3>
+							<!-- ordered list -->
+							<ol>
+								<!-- list items -->
+								<li>Preheat oven to 200°C/400°F/Gas 6. Lightly grease patty/bun tins.</li>
+								<li>Put flour, sugar and ground almonds into a mixing bowl and mix well together.</li>
+								<li>Rub butter/margarine through the dry ingredients. Add the egg and water, if required and mix to a soft dough.</li>
+								<li>Turn onto a lightly floured board and gently knead.</li>
+								<li>Cover with cling film and keep in fridge until ready to use. The pastry will keep for about three days.</li>
+								<li>Roll pastry on a floured board and cut rounds or stars with a cutter to fit greased bun/patty tins. Put a teaspoon of mincemeat in each and cut a lid from remaining pastry to put on top.</li>
+								<li>Bake for about 15 minutes or until golden brown.</li>
+								<li>Dust with icing sugar and enjoy!</li>
+							</ol>
+				</div><br>	
+
+				<hr><br>						
+		</div>
+		
+		<!-- new div with link to return user to top of current page-->
+		<div style="text-align:right">
+			<a href="#" >Back to top</a>
+		</div>
+	</body>
+
+	<script>
+		// Create an alert if login was successful.
+		alert("Sucessfully logged in!");
+	</script>
+</html>

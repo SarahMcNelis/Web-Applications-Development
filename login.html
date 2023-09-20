@@ -1,0 +1,132 @@
+<!DOCTYPE html>    
+<html>  
+<!-- G00398343 WAD Project - Page 4 - Login page which will action recipe page when valid email and password entered. -->  
+	<head>    
+		<title>Login Form</title>  
+		<meta charset="UTF-8">
+		<script src="https://d3js.org/d3.v5.min.js"></script>	
+		<!-- CSS styling within style tags-->
+		<style>
+			/* Header id style*/
+			#header{
+					font-family:"Lucida Handwriting";
+					text-align: center;
+					margin: 20px;  
+					padding: 20px;  
+					width: 700px;
+					}
+			/* style for all center tags*/
+			center{
+					background-color: rebeccapurple;
+					}
+			/* style for headings id*/
+			#headings{
+					font-family:"Lucida Handwriting";
+					}
+			/* styling for all p tags*/
+			p{
+				font-family:"Calibri";
+				text-align: justify;
+				}
+			/* style for all label tags*/
+			label{		
+					font-family:"Lucida Handwriting";
+					}
+			/* Reference 4.1 - CSS style for the next 5 styles adapted from https://www.c-sharpcorner.com/article/creating-a-simple-login-page-using-html-and-css/ */
+			/* class login style */
+			.login{  
+					width: 250px;   
+					margin-right: 200px;  
+					padding: 40px;  
+					border: 3px solid rebeccapurple;
+					float: right;        
+					}  
+			/* email id style*/
+			#email{  
+					width: 250px;  
+					height: 40px;  
+					border: 2px solid rebeccapurple;
+					} 
+			/* pass id style*/
+			#pass{  
+					width: 250px;  
+					height: 40px;  
+					border: 2px solid rebeccapurple;  
+					}
+			/* id log style for login button*/
+			#log{  
+					width: 100px;  
+					height: 40px;  
+					border: none;  
+					background-color: rebeccapurple;  
+					margin-left: 80px;
+					}  
+			/* allow button to hover and point */
+			button:hover{
+						opacity: 0.8;
+						cursor: pointer;
+						}
+		</style>
+	</head>
+		
+	<body>  
+		<!-- center navigation bar to be included in each html file-->
+		<!-- href for each html file. src for image to click on which brings to each href -->   
+		<center>
+			<h1 id="header">Mammy's Homemade Treats &#9825</h1>
+				<a href="homepage.html">
+					<img src="images/home.jpg" alt="Home Button" title="Home" width="200" border="5"  >
+				</a>		
+				<a href="about_mammy.html">
+					<img src="images/about.jpg" alt="About" title="About" width="200" border="5"  >
+				</a>		
+				<a href="gallery.html">
+					<img src="images/gallery.jpg" alt="Gallery" title="Gallery" width="200" border="5" >
+				</a>		
+				<a href="login.html">
+					<img src="images/recipe.jpg" alt="Recipes" title="Recipes" width="200" border="5" >
+				</a>
+				<a href="http://localhost:8000/reviews.html">
+					<img src="images/reviews.jpg" alt="Reviews" title="Reviews" width="200" border="5" >
+				</a>
+		</center>
+		
+		<!-- Allow for breaks/space-->
+		<br><br>
+		
+		<!-- div containing image and small paragraph before asking user to login to access recipe page-->
+		<div>
+			<img src="images/recipe_book.jpg" align="left" border="none" hspace="15" height="500" alt="Recipe Book" title="Recipe Book" style="float:left">
+			<h1 id="headings">Mammy's Recipes</h1>
+				<p>
+					Mammy's recipes come from years of creating delicious treats for family and friends. She loves a full house where she can entertain and socialize at home in the comfort of her own kitchen.
+				</p>
+				<p>
+					However, Mammy's creations don't stop here. She's always challenging herself to make a treat even better than the last. She tweeks and adjusts recipes all the time. And now she wants to share some of her love, hard work and wisdom so that others can enjoy some delicious homemade treats too.
+				</p> 
+				<p> 
+					If you would like to access and stay up to date with Mammy's secret recipes, please login below.
+				</p>
+		</div><br><br>
+
+		<!-- div containing form for user to login -->
+		<!-- Reference 4.2 - following code sourced and adapted from https://www.c-sharpcorner.com/article/creating-a-simple-login-page-using-html-and-css/ -->
+		<!-- Reference 4.3 - following code sourced and adapted from https://www.w3schools.com/tags/att_form_action.asp -->
+		<div class="login"> 
+			<!-- form contents here - once validated and actioned it will move to recipe page-->
+			<form id="login" action="recipes.html" >
+				<!-- label and input for user to enter email address - requried means can't be empty - type email means must contain email format-->
+				<label>Email Address</label>	
+					<input type="email" name="email" id="email" placeholder="Enter Email" required>    
+					<br><br>    
+				<!-- label and input for user to enter password - required so can't be empty-->
+				<label>Password</label>
+					<input type="password" name="Pass" id="pass" placeholder="Enter Password" required>    
+					<br><br> 
+				<!-- Login button which will create the action to move to recipe page -->
+				<button type="submit" name="log" id="log" value="Login">Login</button>
+				<br><br>
+			</form>
+		</div> 
+	</body> 
+</html>     

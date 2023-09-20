@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<!-- G00398343 WAD Project - Page 6 - Reveiws containing D3 Charts -->
+	<head>
+		<title>Mammy's Reviews</title>
+		<meta charset="UTF-8">
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<!-- CSS styling within style tags-->
+		<style>
+			/* header id style */
+			#header{
+					font-family:"Lucida Handwriting";
+					text-align: center;
+					margin: 20px;  
+					padding: 20px;  
+					width: 700px;
+					}
+			/* style for all center tags */
+			center{
+					background-color: rebeccapurple;
+					}
+			/* header class style*/
+			.header{		
+					text-align: left;
+					}
+			/* style for all h1 tags*/
+			h1{
+				font-family:"Lucida Handwriting";
+				}
+			/* style for all h2 tags*/
+			h2 {
+				font-family:"Lucida Handwriting";
+				}
+			/* style for class h1para*/
+			.h1para{
+					font-family:"Calibri";
+					text-align: left;
+					}
+			/* style for optionsDiv class*/
+			.optionsDiv{
+						font-family:"Calibri";
+						}
+			/* Reference 6.1 - CSS style for divs/columns sourced and adapted from https://www.tutorialrepublic.com/faq/how-to-overlay-one-div-over-another-div-using-css.php
+			and https://dev.to/dawnind/3-ways-to-display-two-divs-side-by-side-3d8b#:~:text=The%20most%20common%20way%20to,using%20inline%2Dblock%20css%20property.&text=The%20inline%2Dblock%20property%20on,like%20an%20inline%20element%20does. */
+			/* Style for whole page so that I can have columns*/
+			*{
+				box-sizing: border-box;
+				}
+			/* style for columns class for two equal columns that float next to each other */
+			.column{
+					float: left;
+					width: 50%;
+					padding: 10px;
+					text-align: justify;
+					border: 3px dashed rebeccapurple;
+					}
+			/* Set a style for all buttons */
+			button{
+					background-color: rebeccapurple;
+					color: white;
+					padding: 14px 20px;
+					margin: 8px 0;
+					border: none;
+					cursor: pointer;
+					width: 30%;
+					}
+			/* Allow for hover over all buttons*/
+			button:hover{
+						opacity: 0.8;
+						}
+			/* create hover animation over the rectangles of the charts */
+			rect:hover{
+						fill: rebeccapurple;
+						}
+		</style>	
+	</head>
+
+	<body>
+		<!-- center navigation bar to be included in each html file-->
+		<!-- href for each html file. src for image to click on which brings to each href --> 
+		<center>
+			<h1 id="header">Mammy's Homemade Treats &#9825</h1>
+				<a href="homepage.html">
+					<img src="images/home.jpg" alt="Home Button" title="Home" width="200" border="5"  >
+				</a>		
+				<a href="about_mammy.html">
+					<img src="images/about.jpg" alt="About" title="About" width="200" border="5"  >
+				</a>		
+				<a href="gallery.html">
+					<img src="images/gallery.jpg" alt="Gallery" title="Gallery" width="200" border="5" >
+				</a>		
+				<a href="login.html">
+					<img src="images/recipe.jpg" alt="Recipes" title="Recipes" width="200" border="5" >
+				</a>
+				<a href="http://localhost:8000/reviews.html">
+					<img src="images/reviews.jpg" alt="Reviews" title="Reviews" width="200" border="5" >
+				</a>
+		</center>
+		
+		<br>
+
+		<!-- div containning page heading, para and start image -->
+		<div>
+			<img src="images/stars.jpg" align="right" border="none" hspace="15" height="100" width="300" alt="Review" title="Review">
+			<h1  class="header">Mammy's Reviews</h1>
+				<p class="h1para">
+					Here are some reviews of Mammy's Homemade Treats from family and friends! We may be biased but we're not wrong!
+				</p>	
+		</div>
+		
+		<!-- Overall div row across -->
+		<div class="row">
+			<!-- Div for first column with chart from csv -->
+			<div class="column">
+				<h2>The Cousin's Ratings out of 10!</h2>
+					<p>
+						Want to know what the Cousin's really thought of Mammy's Homemade Treats?<br>All you need to do is follow these steps:
+					</p>
+					<!-- Ordered list with instructions -->
+					<ol>
+						<!-- list items -->
+						<li>Select the Chart Height</li><br>
+						<li>Select the Chart Width</li><br>
+						<li>Select a Chart Color</li><br>
+						<li>Click on the Draw Ratings Button to create the chart!</li>
+					</ol>
+
+					<div class ="optionsDiv">
+						<!-- Reference 6.2 - Select tag sourced from https://www.w3schools.com/tags/tag_select.asp -->
+						<!-- Creating dropdown with options for user to choose chart height-->
+						Select Chart Height:<br>
+						<select id="chartHeight">
+							<!-- Reference 6.3 - Options tag sourced from https://www.w3schools.com/tags/tag_option.asp -->
+							<!-- chosen value will be used in chart -->
+							<option value="400">400 Pixels</option>
+							<option value="500">500 Pixels</option>
+							<option value="600">600 Pixels</option>
+						</select><br><br>	
+						
+						<!-- Creating dropdown with options for user to choose chart width-->
+						Select Chart Width:<br>
+						<select id="chartWidth">
+							<!-- chosen value will be used in chart -->
+							<option value="400">400 Pixels</option>
+							<option value="500">500 Pixels</option>
+							<option value="600">600 Pixels</option>
+						</select><br><br>
+
+						<!-- Creating dropdown with options for user to choose transition time-->
+						Select Transition Time:<br>
+						<select id="transitionTime">
+							<!-- chosen value will be used in chart -->
+							<option value="1000">1000 Miliseconds</option>
+							<option value="3000">3000 Miliseconds</option>
+							<option value="3000">5000 Miliseconds</option>
+						</select><br><br>
+
+						<!-- Creating color chart for user to dictate the graph color -->
+						Select Chart Color:<br> 
+						<input type="color" id="colorPicker"><br><br>
+						
+						<!-- Using onclick event to allow to chart to appear when clicked  -->
+						<button onclick="drawChart()">Draw Ratings Chart</button><br><br><br><br>
+						
+						<!-- Div for data from csv to be created on a chart -->
+						<div id="divCSV" class="column2"></div>
+					</div>
+			<!-- end of column 1 div-->
+			</div>	
+			
+			<!-- Div for second column with chart from an array-->
+			<div class="column">
+				<h2>Their Favourite Homemade Treats!</h2>
+					<p>
+						Are you wondering what Mammy's best homemade treat is?<br>Just follow these steps:
+					</p>
+					<!-- Ordered list with instructions -->
+					<ol>
+						<!-- list items -->
+						<li>Select the Chart Height</li><br>
+						<li>Select the Chart Width</li><br>
+						<li>Select a Chart Color</li><br>
+						<li>Click on the Draw Favourites Button so see what they said!</li>
+					</ol>
+
+					<div class ="optionsDiv">
+						<!-- Creating dropdown with options for user to choose chart height-->
+						Select Chart Height:<br>
+						<select id="chartHeight2">
+							<!-- chosen value will be used in chart -->
+							<option value="400">400 Pixels</option>
+							<option value="500">500 Pixels</option>
+							<option value="600">600 Pixels</option>
+						</select><br><br>	
+						
+						<!-- Creating dropdown with options for user to choose chart width-->
+						Select Chart Width:<br>
+						<select id="chartWidth2">
+							<!-- chosen value will be used in chart -->
+							<option value="400">400 Pixels</option>
+							<option value="500">500 Pixels</option>
+							<option value="600">600 Pixels</option>
+						</select><br><br>
+						
+						<!-- Creating dropdown with options for user to choose transition time-->
+						Select Transition Time:<br>
+						<select id="transitionTime2">
+							<!-- chosen value will be used in chart -->
+							<option value="1000">1000 Miliseconds</option>
+							<option value="2000">3000 Miliseconds</option>
+							<option value="3000">5000 Miliseconds</option>
+						</select><br><br>
+
+						<!-- Creating color chart for user to dictate the graph color -->
+						Select Chart Color:<br> 
+						<input type="color" id="colorPicker2"><br><br>
+
+						<!-- Using onclick event to allow to chart to appear when clicked  -->
+						<button onclick="drawFavourites()">Draw Favourites Chart</button><br><br><br><br>
+						
+						<!--  div for data from array to be created on a chart-->
+						<div id="myDiv" class="column2"> </div>
+				</div>
+			<!-- end of column 2 div -->
+			</div>
+		<!-- end of row 1 div -->
+		</div><br><br> 
+
+		<!-- div with a tag to return user to top of the page if clicked -->
+		<div style="text-align:right">
+			<a href="#" >Back to top</a>
+		</div>
+	</body>
+
+	<script>
+		// Reference 6.4 - Code used for both function was adapted and sourced from the following:
+			// WAD Lectures @ https://learnonline.gmit.ie/course/view.php?id=5101
+			// https://www.w3schools.com/graphics/svg_examples.asp
+			// https://www.w3schools.com/HTML/html5_svg.asp
+			// https://www.d3indepth.com/scales/
+			// https://www.dashingd3js.com/d3-tutorial/adding-an-svg-element-using-d3-js
+			// https://www.tutorialspoint.com/d3js/d3js_transition.htm
+			// https://www.w3schools.com/js/js_arrays.asp
+			// https://www.tutorialsteacher.com/d3js/animation-with-d3js
+	
+	
+		// DRAW RATINGS CHART FUNCTION
+			// Script to create D3 visualisation from a CSV file using events.
+			// Creating Ratings chart from csv
+			function drawChart(){
+				// Read in data from csv
+				d3.csv("cousins_reviews.csv").then(function(data){
+					console.log(data);
+
+			// Creating vars so if they need changing in future, they only have to be changed here.
+				// Using DOM query to use value chosen by user as the height/width/transition/color of the graph.	
+				var height = document.getElementById("chartHeight").value; 
+				var width = document.getElementById("chartWidth").value;
+				var chartColor = document.getElementById("colorPicker").value; 
+				var transitionTime = document.getElementById("transitionTime").value;
+				// counting blocks of data from csv in case length of csv ever changes - it will auto calculate new length here.
+				var dataCount = data.length;
+				// allow for gap between rects.
+				var gap = 3;
+
+				
+			// Convert csv strings to numbers so can scale below (nums show up as string from csv - wont work unless changed).
+				data.forEach(function(d){
+					d.rating = Number(d.rating);
+					})
+
+
+			// Create a scale for Y
+				var yScale = d3.scaleLinear()
+					.domain([0, d3.max(data, function(d){
+						return d.rating;
+					})])
+					//flips the y axis so zero is at bottom of axis and height is top.
+					.range([height, 0]);  
+
+
+			// Create scale for x
+				var xScale = d3.scaleBand() 
+					// anomoyous function that will put cousin names directly under graph using map. 
+					.domain(data.map(function(d){ 
+						return d.cousins;
+						}))
+					// create range of scale
+					.range([0, width]); 
+
+
+			// Create a y-axis
+				// puts axis to the left
+				var yAxis = d3.axisLeft() 
+					.scale(yScale);
+					
+					
+			// Create a x-axis
+				// puts axis on bottom
+				var xAxis = d3.axisBottom() 
+					.scale(xScale);
+
+
+			// This will remove all info each time the function is run so that the current graph is updated and not duplicated.
+				d3.select("#divCSV").selectAll("*").remove(); 
+
+
+			// Create an SVG container
+				var svgContainer = d3.select("#divCSV").append("svg")
+					// attributes for container
+					.attr("width", 700)
+					.attr("height", 700)
+
+
+			// Create a rectangle in container
+				var myRectangle = svgContainer.selectAll("rect")
+					// select data from csv to pass into container
+					.data(data);
+					
+					
+			// Add attributes to rectangle
+				myRectangle.enter()
+					.append("rect")
+					// transition start state
+						//Start color that will transition into chosen color by user.
+						.attr("fill", "rebeccapurple")
+						// anomoyous function get x value using vars created above
+						.attr("x", function(d, i){
+							// x is 50 plus i by width divided by number of bars
+							return (50 + (i * (width/dataCount))); 
+						 })
+						.attr("y", height)
+						// allow for rect gap here
+						.attr("width", (width/dataCount - gap))
+					// Actual transition
+						.transition() 
+						// pass in chosen time by user
+						.duration(transitionTime) 
+					// End state of transition
+						// anomoyous function to get x value.
+						.attr("x", function(d, i){
+							// x is 50 i by plus width divided by number of bars
+							return (50 + (i * (width/dataCount))); 
+						 })
+						 // anomoyous function for y which returns the yscale of the rating from csv.
+						.attr("y", function(d){
+							return yScale(d.rating); 
+						 })
+						 .attr("width", (width/dataCount - gap))
+						 .attr("height", function(d){
+							// minus to have the bars going upwards.
+							return height - yScale (d.rating); 
+						})
+						// add user's chosen color.
+						.attr("fill", chartColor);
+
+
+			// Creating Labels
+				let myLabel = svgContainer.selectAll("text")
+					.data(data);
+					
+					
+			// Add attributes to label
+				myLabel.enter()
+					.append("text")
+					// Transition start state
+						// anomoyous function to return x = 50 plus i by width divided by number of bars
+						.attr("x", function(d, i){
+							return (50 + (i * (width/dataCount))); 
+						 })
+						.attr("y", height)
+					// Actual transition
+						.transition()
+						.duration(transitionTime)
+						// Allow for delay
+						.delay(1000)
+						// allow labels to bounce out
+						.ease(d3.easeBounceOut)
+					// End state of transition
+						// anomoyous function again to reutrn 50 plus i by width divided by number of bars for x
+						.attr("x", function(d, i){
+							return (50 + (i * (width/dataCount))); 
+						 })
+						.attr("y", function(d){
+							return yScale(d.rating) + 15; 
+						 })
+					// Position and pick text, font, size and color.
+						.attr("text-anchor", "right")
+						.attr("font-family", "sans-serif")
+						.attr("font-size", "12px")
+						.attr("fill", "white")
+						.text(function(d){
+							// Adding a start to label to show each cousins start rating! 
+							return d.rating + " *";
+							})
+
+
+			// In order to addd axis to bar chart must append group to svg after bars have been created.
+				svgContainer.append("g")
+					// add ticks to axis - 5px gap beteen 45 and x which is 50
+					.attr("transform", "translate(45, 0)") 
+					// add vertical line to axis
+					.call(yAxis); 
+
+				
+			// Apend group again to add csv values to ticks.
+				svgContainer.append("g")
+					// x value 50 added here to push attributes in away from edge of page
+					.attr("transform", "translate(50," + height + ")") 
+					// call x axis to graph
+					.call(xAxis) 
+					// applies to all text elements on x-axis
+					.selectAll("text") 
+						// apply a transform of a rotation 65 degrees
+						.attr("transform", "rotate(65)")
+						// set anchor to align text on x-axis from start x-axis bar
+						.attr("text-anchor", "start") 
+						// adding x and y attribute to allow set off for px
+						.attr("x", "9") 
+						.attr("y", "3")
+				
+				});
+			// Closing parentheses of drawChart function
+			} 
+
+
+		// DRAW FAVOURITES CHART FUNCTION
+			// Creating favourites chart from array
+			function drawFavourites(){
+
+			// Creating array values and tags.
+				var myArray = 	[8, 17 , 11, 29, 13, 5, 10, 7];
+				var names = ["Coffee Cake","Brownies", "Butterfly Buns", "Brownbread", "Shortbread Swirls", "Blueberry Muffins", "Chocolate Chip Cookies", "Scones"];
+				
+
+			// Creating vars here to only need to be changed once
+				// Using DOM quereis to use value chosen by user as the height/width/transition time/color of the chart
+				var height = document.getElementById("chartHeight2").value;
+				var width = document.getElementById("chartWidth2").value;
+				var chartColor = document.getElementById("colorPicker2").value 
+				var transitionTime = document.getElementById("transitionTime2").value
+				// counting blocks of data from array
+				var dataCount = myArray.length;
+				// allow for gap between rects	
+				var gap = 3;
+
+
+			// Create a scale for Y
+				var yScale = d3.scaleLinear()
+					.domain([0, d3.max(myArray, function(d){
+						return d;
+					})])
+					 //flips the y axis so zero is at bottom of axis
+					.range([height, 0]); 
+
+
+			// Create scale for X
+				// Map array names on chart
+				var xScale = d3.scaleBand() 
+					.domain(names.map(function(d){ 
+						return d;
+						}))
+					.range([0, width]); 
+
+
+			// Create a y-axis
+				// axis to the left
+				var yAxis = d3.axisLeft() 
+					.scale(yScale);
+					
+					
+			// Create a x-axis
+				// puts axis on bottom
+				var xAxis = d3.axisBottom() 
+					.scale(xScale);
+
+
+			// This will remove all info each time the function is run so that the current graph is updated and not duplicated.
+				d3.select("#myDiv").selectAll("*").remove();
+
+
+			// Ceate the container
+				var svgContainer = d3.select("#myDiv").append("svg")
+					.attr("height", 700)
+					.attr("width", 700);
+
+
+			// Can use let or var - using let this time to create rect
+				let myRectangle = svgContainer.selectAll("rect") 
+					// assign myArray as the data for rect
+					.data(myArray);	
+				
+
+			// Add attributes to rectangle
+				myRectangle.enter()
+					.append("rect")
+					// Transition start state
+						 //Chart starts at this color and transitions into chosen color by user.
+						.attr("fill", "rebeccapurple")
+						.attr("x", function(d, i){
+							// width divided by number of bars
+							return (50 + (i * (width/dataCount))); 
+						 })
+						.attr("y", height)
+						.attr("width", (width/dataCount - gap))
+					// Actual transition
+						.transition() 
+						// Pass in chosen time by user
+						.duration(transitionTime) 
+					// Transition end state
+						.attr("x", function(d, i){
+							// width divided by number of bars
+							return (50 + (i * (width/dataCount))); 
+						 })
+						.attr("y", function(d){
+							return yScale(d); 
+						 })
+						 .attr("width", (width/dataCount - gap))
+						 .attr("height", function(d){
+							//to have the bars going the right direction
+							return height - yScale (d); 
+						})
+						.attr("fill", chartColor);		
+						
+					
+			// Creating a label
+				let myLabel = svgContainer.selectAll("text")
+					.data(myArray);
+					
+					
+			// Add attributes to label
+				myLabel.enter()
+					.append("text")
+					// Transition start state
+						.attr("x", function(d, i){
+							return (50 + (i * (width/dataCount))); 
+						 })
+						.attr("y", height)
+					// Actual transition
+						.transition()
+						.duration(transitionTime)
+						// allow for delay
+						.delay(1000)
+						// allow to bounce out
+						.ease(d3.easeBounceOut)
+					// End state of transition
+						// anomoyous fucntion to return x. 50 plsu i by width divided by count.
+						.attr("x", function(d, i){
+							return (50 + (i * (width/dataCount))); 
+						 })
+						// anomoyous function for y to return yScale data
+						.attr("y", function(d){
+							return yScale(d) + 15; 
+						 })	
+					// Add label attributes, position, font, size and color
+						.attr("text-anchor", "right")
+						.attr("font-family", "sans-serif")
+						.attr("font-size", "12px")
+						.attr("fill", "white")
+						// add percentage symbol to text for favs as percentile.
+						.text(function(d){
+							return d + " %";
+							})
+
+
+			// Add axis to bar chart by appending group to svg after bars have been created
+				svgContainer.append("g")
+					// add ticks to axis - 5pc gap beteen 45 and x which is 50
+					.attr("transform", "translate(45, 0)") 
+					// add vertical line to axis
+					.call(yAxis); 
+
+
+			// Apend group again to values to ticks
+				svgContainer.append("g")
+					// x value 50 added here to push attributes in away from edge of page
+					.attr("transform", "translate(50," + height + ")") 
+					// call x axis to graph
+					.call(xAxis) 
+					// applies to all text elements on x-axis
+					.selectAll("text") 
+						// apply a transform of a rotation of 65 degrees
+						.attr("transform", "rotate(65)") 
+						// set anchor to align text on x-axis from start x-axis bar
+						.attr("text-anchor", "start") 
+						// adding x and y attribute to allow set off for px
+						.attr("x", "9") 
+						.attr("y", "3")			
+
+			// End of draw favourites function			
+			}
+	</script>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<!-- G00398343 WAD Project - Page 2 - About Mammy -->
+	<head>
+		<title>About Mammy</title>
+		<meta charset="UTF-8">
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<!-- CSS styling within style tags-->		
+		<style>
+			/* css style for all center tag*/
+			center{
+					background-color: rebeccapurple;
+					}
+			/* css style for header id*/
+			#header{
+					font-family:"Lucida Handwriting";
+					text-align: center;
+					margin: 20px;  
+					padding: 20px;  
+					width: 700px;
+					}
+			/* css style for para class */
+			.para{
+					font-family:"Calibri";
+					text-align: justify;
+					}
+			/* style for headings id*/
+			#headings{
+						font-family:"Lucida Handwriting";
+						}
+			/* style for bottom heading id*/
+			#bottomHeading{
+							font-family:"Lucida Handwriting";
+							}
+			/* Reference 2.1 - CSS style for the button was adapted from https://www.c-sharpcorner.com/article/creating-a-simple-login-page-using-html-and-css/ */
+			/* style for button id */
+			#button{
+					cursor: pointer;
+					width: 200px;  
+					height: 40px;  
+					border: 3px dashed black;  
+					background-color: goldenrod; 
+					font-family:"Calibri";
+					float: right;
+					margin: 20px;
+					}
+			/* extra style allowing hover over button*/
+			button:hover{
+						opacity: 0.8;
+						}
+		</style>
+	</head>
+	
+		<!-- bdy id to be used in script to change styling through DOM -->
+		<body id="bdy">
+			<!-- center navigation bar to be included in each html file-->
+			<!-- href for each html file. src for image to click on which brings to each href -->
+			<center>
+			<h1 id="header">Mammy's Homemade Treats &#9825</h1>
+				<a href="homepage.html">
+					<img src="images/home.jpg" alt="Home Button" title="Home" width="200" border="5"  >
+				</a>		
+				<a href="about_mammy.html">
+					<img src="images/about.jpg" alt="About" title="About" width="200" border="5"  >
+				</a>		
+				<a href="gallery.html">
+					<img src="images/gallery.jpg" alt="Gallery" title="Gallery" width="200" border="5" >
+				</a>		
+				<a href="login.html">
+					<img src="images/recipe.jpg" alt="Recipes" title="Recipes" width="200" border="5" >
+				</a>
+				<a href="http://localhost:8000/reviews.html">
+					<img src="images/reviews.jpg" alt="Reviews" title="Reviews" width="200" border="5" >
+				</a>
+			</center>
+		<!-- allow for space -->
+		<br><br>
+		
+		<!-- div containing image, click button and about content -->
+		<div>
+			<img src="images/mammy_baking.jpg" align="right" border="3" hspace="15" height="500" alt="Mammy Baking" title="Mammy Baking">
+			
+			<!-- Reference 2.2 - Button event adapted from https://www.w3schools.com/jsref/event_onclick.asp
+			<!-- change para style using DOM in function in script when button is clicked -->
+			<button onclick="changePara()">Change Paragraph Style</button><br>
+
+			<h2 id="headings">About Mammy</h2>
+				<!-- this is the id used to change style through DOM-->
+				<div id="newPara">
+					<p class="para">
+						This website has been designed to show appreciation to all the Mammy's in the world, especially, my Mammy - Peggy. 
+					</p>
+					<p class="para">
+						This website showcases the incredibly talented woman my Mammy is. You can find pictures of all her delicious homemade treats under the Gallery Tab. And, if you think you might want to try some of Mammy's homemade goods, why not hit the Receipe Tab. All you need to do is login to access her secret recipes. 
+					</p>
+					<p class="para">
+						You never know, you might bake something to make someone else's life that little bit brighter! 
+					</p>
+				</div>
+
+			<h3 id="headings">Everyone needs a Mammy</h3>
+				<p class="para">
+					Mammy's come in all shapes, sizes and forms. Some can be big sisters, small sisters, a cousin, an aunt, a neighbour, a friend,  a Godmother, a Gran/Granny/Grandmother/Grandma/Nana/Nan/Nanny or maybe even a kind stranger.<br>
+					One thing that is true in life is, we all need a Mammy.
+				</p>
+
+			<h3 id="headings">Need a bit of comfort?</h3>
+				<p>
+					We all go through rocky times in life. We all have that bad day. We all need a little cry or rant. And sometimes we get overwhelmed. But the one thing to help make the world a little brighter is the sweet, glorious smell of Mammy's baking coming from the Kitchen.
+				</p>
+				
+			<h3 id="headings">Waiting for the call?</h3>
+				<p class="para">
+					After that divine smell of baking comes a call down the hall from Mammy... <br><br>
+					<i>"Sarah.... Tea's ready"</i><br><br>
+					And that's when you know it's time for a break. You walk into the kitchen and there looking back at you is Mammy sitting at the table, tea poured, and a slice of whatever delicious treat she's after baking waiting for you.<br>
+					And with that break comes the councelling session. Free of charge!
+				</p>
+				
+			<h3 id="headings">Mammy's Gospel</h3>
+				<p class="para">
+					Mammy doesn't always have to say anything. Sometimes, she's just the best listener. Sure who doesn't just need someone to just sit there and listen to you? Which is great when your mid way through a rant and just need to get it all off your chest.<br><br>
+					But then sometimes Mammy will offer a few words of wisdom.<br>
+					My Mammy likes to plant a seed of advise, almost like a clip out of a movie, gets up off the chair and walks away pretending to clean the counter or wash some dishes but really she's just giving me time to mull over the sensible suggestion she's just given me.<br><br>
+				</p>
+				
+				<p class="para">
+					Smart woman my Mammy... maybe I should bake her a treat! 
+				</p>
+		</div>
+
+		<!-- Button to change background colour using DOM in script function-->
+		<button onclick="changeBackground()" id="button">Change Background Color</button><br>
+
+		<!-- div for bottom heading with link to gallery tab -->
+		<div>
+			<br>
+			<h2 id="bottomHeading">Sound good? Check out Mammy's Homemade Treat <a href="gallery.html">Gallery</a></h2>
+		</div>
+
+		<!-- div with link to return user to top of current page-->
+		<div style="text-align:right">
+			<a href="#" >Back to top</a>
+		</div>
+	</body>
+	
+	<script>
+		// Reference 2.3 - DOM query to change CSS/HTML style adapted from https://www.w3schools.com/js/js_htmldom_css.asp
+		// Using DOM in this function to change background color of bdy id when button is clicked. 
+			function changeBackground(){
+					document.getElementById("bdy").style.background = "goldenrod";		
+			}
+
+
+		// Reference 2.4 - DOM query to alter CSS/HTML style adapted from https://www.w3schools.com/jsref/dom_obj_style.asp
+		// Another function using DOM to change HTML styling of newPara id. 
+		// Will change background colour, boder, font and adds a shadow to div containing id. 
+		function changePara(){
+				var para = document.getElementById("newPara");
+					para.style.background = "silver";
+					para.style.border = "3px dashed rebeccapurple";
+					para.style.fontFamily = "Ariel";
+					para.style.boxShadow = "10px 20px 30px grey";
+		}
+	</script>
+</html>
