@@ -7,7 +7,7 @@ This repository contains a business website development project I completed for 
 ## Project Specification
 Create a website with content of my choosing where I employ a common design theme/style and colour scheme throuhgout. 
 
-Website Requirements:
+**Website Requirements:**
 1. Allow the customer to enter their login details and have login details validated (via a login screen);
 2. Perform form validation through JavaScript or HTML to ensure that:
     - a. text fields are not empty;
